@@ -22,4 +22,4 @@
   blockinfile:
     backup: yes
     path: /etc/hosts
-    block: "{{ hosts.ip }} {{ hosts.hostname }}"
+    block: "{{ hosts }}"
