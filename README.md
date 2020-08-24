@@ -11,7 +11,10 @@ None
 Role Variables
 --------------
 
-hosts -> expects a string to set in the hosts file example: "127.0.0.5 test1 \n 127.0.0.6 test2"
+Hosts (Required)
+hosts: 
+  - { ip: '127.0.0.5', hostname: 'example1' }
+  - { ip: '127.0.0.6', hostname: 'example2' }
 
 Dependencies
 ------------
@@ -23,7 +26,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - ansible-role-common
+         - common
 
 License
 -------
