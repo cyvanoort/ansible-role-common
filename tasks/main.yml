@@ -1,0 +1,25 @@
+---
+# tasks file for ansible-role-common/
+- name: Update repository and Upgrade packages
+  become: yes
+  apt:
+    upgrade: dist
+    update_cache: yes
+
+- name: install what I like
+  become: yes
+  apt:
+    name: ['vim','bash-completion']
+    state: latest
+
+- name: Setup timezone to Amsterdam
+  become: yes
+  timezone:
+    name: Europe/Amsterdam
+
+- name: Set hosts
+  become: yes
+  blockinfile:
+    backup: yes
+    path: /etc/hosts
+    block: "{{ hosts }}"
