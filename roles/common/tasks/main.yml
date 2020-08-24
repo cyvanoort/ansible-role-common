@@ -19,9 +19,9 @@
 
 - name: Set hosts
   become: yes
-  blockinfile:
+  lineinfile:
     backup: yes
     path: /etc/hosts
-    block: "{{ item.ip }} {{ item.hostname }}"
+    line: "{{ item.ip }} {{ item.hostname }}"
   with_items:
     - "{{ hosts }}"
