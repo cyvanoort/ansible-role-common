@@ -23,7 +23,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - common
+         - ansible-role-common
 
 License
 -------
