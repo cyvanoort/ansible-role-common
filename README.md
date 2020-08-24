@@ -1,4 +1,4 @@
-Role Name
+ansible-role-common
 =========
 
 This role is mostly here to test ansible and will get actions to set a server state the way I like it.
