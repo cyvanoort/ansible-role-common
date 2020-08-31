@@ -10,7 +10,7 @@
   become: yes
   apt:
     name: ['vim','bash-completion']
-    state: latest
+    state: present
 
 - name: Setup timezone to Amsterdam
   become: yes
